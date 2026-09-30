@@ -13,7 +13,9 @@ export type StatsSnapshot = {
 
 type Store = StatsSnapshot & { month_key: string };
 
-const filePath = resolve(process.cwd(), "data/site-stats.json");
+const filePath = process.env.VERCEL
+  ? "/tmp/site-stats.json"
+  : resolve(process.cwd(), "data/site-stats.json");
 
 function emptyStore(): Store {
   const downloads: Record<string, number> = {};

@@ -1,0 +1,304 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Design system: market night — deep navy field, cyan and green chart
+ * light, amber as a quiet spark. Built to sit with the hero market chart.
+ */
+
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary-glow: var(--primary-glow);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-signal: var(--signal);
+  --color-energy: var(--energy);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --font-display: "Sora", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-accent: "Sora", ui-sans-serif, system-ui, sans-serif;
+
+}
+
+:root {
+  --radius: 0.85rem;
+  --background: oklch(0.16 0.045 265);
+  --foreground: oklch(0.96 0.015 200);
+  --card: oklch(0.21 0.04 262);
+  --card-foreground: oklch(0.96 0.015 200);
+  --popover: oklch(0.2 0.04 262);
+  --popover-foreground: oklch(0.96 0.015 200);
+  --primary: oklch(0.84 0.14 195);
+  --primary-foreground: oklch(0.16 0.05 265);
+  --primary-glow: oklch(0.9 0.12 185);
+  --secondary: oklch(0.24 0.04 260);
+  --secondary-foreground: oklch(0.94 0.02 200);
+  --muted: oklch(0.23 0.035 262);
+  --muted-foreground: oklch(0.75 0.03 220);
+  --accent: oklch(0.28 0.05 250);
+  --accent-foreground: oklch(0.96 0.015 200);
+  --signal: oklch(0.84 0.14 195);
+  --energy: oklch(0.82 0.18 155);
+  --destructive: oklch(0.62 0.2 25);
+  --destructive-foreground: oklch(0.98 0.01 200);
+  --border: oklch(0.78 0.1 195 / 22%);
+  --input: oklch(0.78 0.1 195 / 28%);
+  --ring: oklch(0.84 0.14 195);
+
+  --gradient-signal: linear-gradient(120deg, oklch(0.86 0.14 195) 0%, oklch(0.8 0.17 165) 100%);
+  --gradient-depth:
+    radial-gradient(900px 480px at 85% 0%, oklch(0.32 0.1 200 / 35%), transparent 55%),
+    radial-gradient(700px 420px at 10% 20%, oklch(0.28 0.08 155 / 18%), transparent 50%),
+    linear-gradient(180deg, oklch(0.15 0.05 268) 0%, oklch(0.12 0.04 270) 100%);
+  --gradient-panel: linear-gradient(180deg, oklch(0.24 0.045 258 / 92%) 0%, oklch(0.18 0.04 268 / 94%) 100%);
+  --gradient-text: linear-gradient(100deg, oklch(0.88 0.13 195) 0%, oklch(0.84 0.18 155) 100%);
+  --shadow-depth: 0 18px 40px -24px oklch(0 0 0 / 70%);
+  --shadow-glow: 0 0 0 1px oklch(0.84 0.14 195 / 35%), 0 12px 30px -16px oklch(0.75 0.16 190 / 45%);
+  --shadow-glow-strong: 0 0 0 1px oklch(0.84 0.14 195 / 55%), 0 0 36px -8px oklch(0.8 0.16 185 / 55%);
+  --grid-line: oklch(0.8 0.1 195 / 10%);
+  --tilt-perspective: 1100px;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: var(--gradient-depth);
+    background-attachment: fixed;
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    font-size: 1.0625rem;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    letter-spacing: -0.03em;
+  }
+
+  ::selection {
+    background: oklch(0.84 0.14 195 / 35%);
+    color: oklch(0.14 0.04 265);
+  }
+}
+
+@utility text-gradient {
+  background-image: var(--gradient-text);
+  background-clip: text;
+  color: transparent;
+}
+
+@utility panel {
+  background: var(--gradient-panel);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-depth);
+  transition: box-shadow 0.4s ease, border-color 0.4s ease, transform 0.4s ease;
+}
+
+@utility panel-glow {
+  box-shadow: var(--shadow-glow-strong);
+  border-color: oklch(0.84 0.14 195 / 50%);
+}
+
+@utility eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+}
+
+@utility tech-grid {
+  background-image:
+    linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+  background-size: 72px 72px;
+}
+
+@utility scene-3d {
+  perspective: var(--tilt-perspective);
+}
+
+@utility tilt-card {
+  transform-style: preserve-3d;
+  will-change: transform;
+  transition: transform 0.15s ease-out, box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+@utility tilt-card-content {
+  transform: translateZ(28px);
+}
+
+@utility font-accent {
+  font-family: var(--font-accent);
+  font-style: normal;
+}
+
+@utility animate-spin-slow {
+  animation: spin-slow 22s linear infinite;
+}
+
+@utility animate-spin-slow-reverse {
+  animation: spin-slow-reverse 28s linear infinite;
+}
+
+@utility animate-drift {
+  animation: drift 11s ease-in-out infinite;
+}
+
+[data-magnetic] {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@utility animate-float-slow {
+  animation: float-slow 7s ease-in-out infinite;
+}
+
+@utility animate-pulse-node {
+  animation: pulse-node 2.2s ease-in-out infinite;
+}
+
+@utility flow-track {
+  background-image: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--color-primary) 50%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  animation: flow-slide 3.5s linear infinite;
+}
+
+@keyframes float-slow {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulse-node {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.55;
+    box-shadow: 0 0 0 0 oklch(0.62 0.13 58 / 55%);
+  }
+  50% {
+    transform: scale(1.35);
+    opacity: 1;
+    box-shadow: 0 0 0 6px oklch(0.62 0.13 58 / 0%);
+  }
+}
+
+@keyframes shimmer-text {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes flow-slide {
+  0% {
+    background-position: -100% 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin-slow-reverse {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes drift {
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(10px, -14px) rotate(8deg);
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+

@@ -4,6 +4,7 @@ import { ArrowDown, ArrowRight, Mail } from "lucide-react";
 
 import { Metric3D } from "@/components/Metric3D";
 import { Awards } from "@/components/sections/Awards";
+import { ExternalEngagement } from "@/components/sections/ExternalEngagement";
 import { Resources } from "@/components/sections/Resources";
 import { VisitorCounter } from "@/components/sections/VisitorCounter";
 import { ContactSection } from "@/components/sections/ContactSection";
@@ -18,7 +19,7 @@ import { EMAIL, heroMetrics, toolkit } from "@/lib/site-data";
 
 const title = "Olivia Oluchi Ebepu | Marketing & Market Intelligence";
 const description =
-  "Olivia Oluchi Ebepu, M.S. Marketing, works in market research, digital campaigns, and AI-supported labor and economic intelligence. Based in Worcester, MA.";
+  "Olivia Oluchi Ebepu, M.S. Marketing, works in market research, digital campaigns, and AI-supported labor and economic intelligence. Office in Stoughton, Massachusetts, covering Framingham and Natick.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -109,7 +110,8 @@ function Index() {
         >
           I studied accountancy, then spent years in marketing and business development. Graduate
           school at Clark University brought data into the center of the work. Today I lead
-          marketing for a healthcare staffing agency in Worcester.
+          marketing for Urban Staffing, a healthcare staffing agency based in Boston. My office is
+          in Stoughton, Massachusetts, and I cover Framingham and Natick.
         </motion.p>
 
         <motion.div
@@ -182,6 +184,15 @@ function Index() {
         sub="Staffing growth, an AI research platform, a conference paper, and earlier commercial work in Nigeria."
       >
         <WorkGallery />
+      </Section>
+
+      <Section
+        id="engagement"
+        eyebrow="External engagement"
+        headline="MarketIntel, checked against real workforce data"
+        sub="The work has moved from building the system to using it with practitioners: a mayoral referral in Worcester, a regional data test, a written review, and public comments to two federal agencies."
+      >
+        <ExternalEngagement />
       </Section>
 
       <Section

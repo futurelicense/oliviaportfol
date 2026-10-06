@@ -15,6 +15,7 @@ import {
 } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import {
+  COVERAGE,
   EMAIL,
   LOCATION,
   PHONE_DISPLAY,
@@ -76,9 +77,12 @@ export function ContactSection() {
                 {PHONE_DISPLAY}
               </a>
             </li>
-            <li className="inline-flex items-center gap-2 text-muted-foreground">
-              <MapPin className="h-4 w-4 text-primary" />
-              {LOCATION}
+            <li className="inline-flex items-start gap-2 text-muted-foreground">
+              <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
+              <span>
+                {LOCATION}
+                <span className="mt-1 block">Covering {COVERAGE}</span>
+              </span>
             </li>
           </ul>
           <ul className="mt-6 space-y-2">

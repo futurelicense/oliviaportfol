@@ -2,7 +2,8 @@
 
 Personal portfolio for Olivia Oluchi Ebepu, M.S. Marketing — market research,
 digital campaigns, business development, and AI-supported labor and economic
-intelligence. Based in Worcester, MA.
+intelligence. Office in Stoughton, Massachusetts, covering Framingham and Natick.
+Urban Staffing Inc is based in Boston.
 
 ## Stack
 

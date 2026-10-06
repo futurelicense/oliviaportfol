@@ -27,10 +27,11 @@ const personSchema = {
   alumniOf: ["Clark University", "Abia State University"],
   address: {
     "@type": "PostalAddress",
-    addressLocality: "Worcester",
+    addressLocality: "Stoughton",
     addressRegion: "MA",
     addressCountry: "US",
   },
+  areaServed: ["Framingham, MA", "Natick, MA"],
   knowsAbout: [
     "Market Research",
     "Digital Marketing",
@@ -108,7 +109,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "Olivia Oluchi Ebepu, M.S. Marketing — market research, digital campaigns, and AI-supported labor and economic intelligence. Worcester, MA.",
+          "Olivia Oluchi Ebepu, M.S. Marketing — market research, digital campaigns, and AI-supported labor and economic intelligence. Stoughton, Massachusetts.",
       },
       { name: "author", content: "Olivia Oluchi Ebepu" },
       { name: "robots", content: "index, follow" },
@@ -183,7 +184,7 @@ function RootComponent() {
       </main>
       <footer className="mt-8 border-t border-border py-8 text-center">
         <p className="text-base text-muted-foreground">
-          Olivia Oluchi Ebepu · Marketing & market research · Worcester, MA
+          Olivia Oluchi Ebepu · Marketing & market research · Stoughton, MA · Framingham & Natick
         </p>
       </footer>
       <Toaster position="bottom-right" />

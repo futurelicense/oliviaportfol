@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Award, GraduationCap } from "lucide-react";
 
 import { ContactSection } from "@/components/sections/ContactSection";
+import { ExternalEngagement } from "@/components/sections/ExternalEngagement";
 import { ToolkitConstellation } from "@/components/sections/ToolkitConstellation";
 import { WorldBackground } from "@/components/WorldBackground";
 import { absoluteUrl } from "@/lib/site-config";
@@ -45,8 +46,9 @@ function ExperiencePage() {
           </h1>
           <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
             The path runs from insurance and business development in Nigeria, through a marketing
-            degree at Clark University, to healthcare staffing in Worcester and an independent
-            market-intelligence project.
+            degree at Clark University, to healthcare staffing based in Boston. I cover Framingham
+            and Natick from an office in Stoughton, and I am testing an independent
+            market-intelligence project with regional workforce data.
           </p>
         </motion.div>
       </section>
@@ -90,6 +92,19 @@ function ExperiencePage() {
             </motion.article>
           ))}
         </div>
+      </section>
+
+      <section id="engagement" className="mx-auto max-w-5xl scroll-mt-24 px-5 py-16 md:px-8">
+        <span className="eyebrow">External engagement</span>
+        <h2 className="mt-3 mb-4 font-display text-3xl font-semibold md:text-4xl">
+          How MarketIntel has been tested
+        </h2>
+        <p className="mb-10 max-w-3xl text-lg leading-relaxed text-muted-foreground">
+          Development led to a referral from the Office of the Mayor of Worcester, a test on local
+          workforce and economic data, a written review from MassHire, and public comments on
+          federal labor-market data collections.
+        </p>
+        <ExternalEngagement />
       </section>
 
       <section className="mx-auto max-w-6xl px-5 py-16 md:px-8">

@@ -1,7 +1,8 @@
 export const EMAIL = "ebepuolivia@yahoo.com";
 export const PHONE_DISPLAY = "508-849-1427";
 export const PHONE_TEL = "+15088491427";
-export const LOCATION = "Worcester, MA";
+export const LOCATION = "Stoughton, Massachusetts, United States";
+export const COVERAGE = "Framingham and Natick";
 
 export const heroMetrics = [
   { value: 40, suffix: "%", label: "More clients at Urban Staffing" },
@@ -49,7 +50,7 @@ export const journeyStages = [
   {
     number: "06",
     plain:
-      "Today I lead marketing for a healthcare staffing agency and I am building MarketIntel, an AI project for labor and economic decisions.",
+      "Today I lead marketing for a healthcare staffing agency based in Boston. I work from Stoughton and cover Framingham and Natick, and I am building MarketIntel, an AI project for labor and economic decisions.",
     title: "Market intelligence",
     subtitle: "Marketing Manager · Urban Staffing & independent research",
   },
@@ -74,9 +75,9 @@ export const selectedWork = [
   {
     title: "Healthcare staffing growth",
     organization: "Urban Staffing Inc",
-    location: "Worcester, MA",
+    location: "Boston, MA",
     plain:
-      "Outreach, content, email, SEO, and audience research for a healthcare and human services staffing agency. Client acquisition rose 40%, digital engagement 35%, and campaign effectiveness 25%.",
+      "Outreach, content, email, SEO, and audience research for a healthcare and human services staffing agency based in Boston. I cover Framingham and Natick. Client acquisition rose 40%, digital engagement 35%, and campaign effectiveness 25%.",
     kind: "staffing" as const,
   },
   {
@@ -84,7 +85,7 @@ export const selectedWork = [
     organization: "Independent research",
     location: "United States",
     plain:
-      "An AI market-intelligence platform for workforce, labor-market, and economic questions. It turns scattered data into insights, charts, maps, timelines, and reports for people making workforce decisions.",
+      "An AI market-intelligence platform for workforce, labor-market, and economic questions. It turns scattered data into insights, charts, maps, timelines, and reports. I tested it on Worcester workforce and economic data for 2019–2024 and reviewed the results with regional workforce practitioners.",
     kind: "research" as const,
   },
   {
@@ -104,6 +105,52 @@ export const selectedWork = [
     kind: "growth" as const,
   },
 ];
+
+export const externalEngagement = [
+  {
+    title: "Referral from the Mayor of Worcester",
+    partner: "City of Worcester",
+    plain:
+      "After I wrote to the Office of the Mayor of Worcester about MarketIntel, the Mayor's Chief of Staff directed me to the MassHire Central Region Workforce Board and the City of Worcester Executive Office of Economic Development. The referral was for a working discussion of labor-market analytics, sector-specific needs, and how local workforce training lines up.",
+    record: "Official correspondence from the Office of the Mayor of Worcester.",
+  },
+  {
+    title: "A working conversation with MassHire",
+    partner: "MassHire Central Region Workforce Board",
+    plain:
+      "I met with Jeffrey Turgeon to walk through MarketIntel, the region's workforce data needs, and a practical test using regional information.",
+    record:
+      "Meeting records, email correspondence, and workforce and economic data shared through the engagement.",
+  },
+  {
+    title: "Testing on Worcester data, 2019–2024",
+    partner: "MarketIntel",
+    plain:
+      "I tested MarketIntel with a Worcester workforce and economic dataset covering 2019–2024. I ran several workforce and economic questions against that connected data.",
+    record: "Test results, the connected dataset, and a testing report.",
+  },
+  {
+    title: "Written review from MassHire",
+    partner: "Jeffrey Turgeon, MassHire",
+    plain:
+      "After the Worcester test, Jeffrey Turgeon reviewed the results in writing. He named limits in the dataset that was available and pointed to the value of adding more data before a wider analysis. That review is guiding the next round of testing and cross-referencing.",
+    record: "Written correspondence from MassHire after review of the testing report.",
+  },
+  {
+    title: "Public comment to the U.S. Department of Labor",
+    partner: "Employment and Training Administration",
+    plain:
+      "I submitted an individual public comment on the use of technology, data access, validation, and human review in workforce information collection and analysis. The Department acknowledged receipt and confirmed the comment would be part of the public record.",
+    record: "The submitted comment, the submission email, and the Department's acknowledgment.",
+  },
+  {
+    title: "Public comment to the U.S. Census Bureau",
+    partner: "Longitudinal Employer-Household Dynamics",
+    plain:
+      "I submitted an individual public comment on the LEHD information collection. It drew on the testing work and addressed data connectivity, documentation, cross-referencing, source transparency, and validation.",
+    record: "The submitted comment and the submission correspondence.",
+  },
+] as const;
 
 export const awards = [
   {
@@ -205,9 +252,9 @@ export const roles = [
     period: "Apr 2025 → Present",
     company: "Urban Staffing Inc",
     role: "Marketing Manager",
-    environment: "Worcester, MA · Healthcare staffing",
+    environment: "Boston, MA · Framingham & Natick",
     summary:
-      "I plan and run outreach for a healthcare and human services staffing agency: social, content, email, SEO, and the research behind who the campaigns are for.",
+      "I plan and run outreach for a healthcare and human services staffing agency based in Boston. I work from an office in Stoughton and cover Framingham and Natick: social, content, email, SEO, and the research behind who the campaigns are for.",
     highlights: [
       "Targeted outreach and marketing increased client acquisition by 40%.",
       "Social, content, email, and SEO work improved digital engagement by 35%.",
@@ -224,7 +271,10 @@ export const roles = [
     highlights: [
       "Designed to surface labor shortages, skills gaps, emerging workforce needs, and regional economic constraints.",
       "Insights show up as charts, maps, timelines, and reports.",
-      "Presented the framework at the ACCSA Global Conference 2026 and I am gathering feedback from workforce professionals.",
+      "Tested the system on a Worcester workforce and economic dataset covering 2019–2024, then reviewed the results with the MassHire Central Region Workforce Board.",
+      "The Office of the Mayor of Worcester referred the work to MassHire and to the city's Executive Office of Economic Development.",
+      "Submitted public comments to the U.S. Department of Labor and the U.S. Census Bureau on workforce and labor-market data.",
+      "Presented the framework at the ACCSA Global Conference 2026.",
     ],
   },
   {
